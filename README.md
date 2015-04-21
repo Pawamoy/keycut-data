@@ -102,7 +102,7 @@ Then, add your shortcuts.
 ```yaml
 # If you don't need categories, just use ONE category named 'shortcuts'
 Some category:
-- action: some action related to this category
+- action: An action should start with a capital and end with a point.
   keys: [<SEQUENCE_1>, ..., <SEQUENCE_K>]
 # The next section details syntax of SEQUENCES
 - action: >
