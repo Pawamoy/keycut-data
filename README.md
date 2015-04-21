@@ -86,15 +86,13 @@ inherits: true
 inherits: false
 ```
 
-Then, add your global variables, if any.
+Then, add your global variables, if any.  
+The following values are the defaults.
 
 ```yaml
-# Set 'binding: true' by default (global's default: false)
-binding: true
-# Set 'overwrite: true` by default (global's default: false too)
-overwrite: true
-# And the same goes for 'case_sensitive' (global's default: false again)
-case_sensitive: true
+binding: false
+overwrite: false
+case_sensitive: auto
 # These global variables are handy if you don't want to add
 # these attributes in each of the following shortcuts
 ```
@@ -102,7 +100,7 @@ case_sensitive: true
 Then, add your shortcuts.
 
 ```yaml
-# If you don't need categories, just use ONE category named 'shortcuts:'
+# If you don't need categories, just use ONE category named 'shortcuts'
 Some category:
 - action: some action related to this category
   keys: [<SEQUENCE_1>, ..., <SEQUENCE_K>]
@@ -126,13 +124,20 @@ Here is another category:
 ```
 
 ### Syntax of sequences
-* A space in a sequence means that you release all keys before continue,
-  just like when you type words: Ctrl+u then t (`keys: [Ctrl-u t]`)
+* To disambiguate, each control key should use CapFirst format, and each
+  letter in a sequence part **with control keys** should be lower:  
+  `Ctrl-a`, `Ctrl-Shift-b` or `Ctrl-Alt-Del`, but not
+  `ctrl-a`, `ctrl-shift-B` or `CTRL-ALT-DEL`.  
 
-* But spaces are optional, even if more readable. In fact, we prefer saying
-  explicitly when keys have to be entered ALL TOGETHER, with the '-' symbol.
-  Thus, `Shift-kct` means Shift+k then c then t. Of course, avoid writing
-  Ctrl+w then Ctrl+w like this: `Ctrl-wCtrl-w`. Use a space!
+* When keys have to be entered ALL TOGETHER, use the `-` symbol:  
+  `Shift-kct` means Shift+k then c then t, **while keeping Shift down**.  
+  It is equivalent to writing `Shift-k Shift-c Shift-t`, but more concise
+  (in this case you could even write `KCT` but that's not the point).  
+  If Shift should have been released before typing c then t, then you would
+  have written `Shift-k ct` or `Shift-k c t` (only the first space is important).  
+  Sometimes, sequences with or without release of the control key are equals,
+  like `Ctrl-w Ctrl-w` in vim. In the vim shortcut you should then write the two:
+  `keys: [Ctrl-ww, Ctrl-w w]`.
   > Remember that control keys like Ctrl, Alt, Shift and others have to
     be pressed BEFORE any other key in order for the sequence to be recognized.
   
@@ -144,14 +149,13 @@ Here is another category:
 ### Case sensitivity
 Typically, if a sequence (an or just a part of it) requires usage of a control
 key (Ctrl, Alt, Shift, ...), then it is assumed to be case-insensitive.  
-To disambiguate, each control key should use CapFirst format, and each
-letter in a sequence part **with control keys** should be lower:  
-`Ctrl-a`, `Ctrl-Shift-b` or `Ctrl-Alt-Del`, but not
-`ctrl-a`, `ctrl-shift-B` or `CTRL-ALT-DEL`.  
-Then, each sequence part **without any control key** is assumed to be
+Thus, each sequence part **without any control key** is assumed to be
 case-sensitive: `g` is not equal to `G`, which is equal to `Shift-g`.
-You can override this behavior using a finer control over sequences attributes,
-see the next section.
+You can override this behavior using the `case_sensitive` attribute:
+* `true`: case sensitive for all
+* `false`: case insensitive for all
+* `auto`: case insensitive for sequences with control keys,
+  case sensitive otherwise.
 
 ### Finer control over sequences attributes
 Sometimes you can have a key sequence that does not make use of control keys
