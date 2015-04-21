@@ -1,17 +1,35 @@
 # keycut-data
 Keyboard shortcuts data stored in YAML files.
 
+* [Motivation](#motivation)
+* [Contributing](#contributing-or-using-data-to-build-a-keycut-tool)
+  * [Shortcut structure](#structure-of-a-shortcut)
+  * [Directory structure](#directory-structure-for-keycut-tools)
+  * [File names](#file-names)
+  * [File contents](#file-contents)
+  * [Syntax of sequences](#syntax-of-sequences)
+  * [Case sensitivity](#case-sensitivity)
+  * [Finer control](#finer-control-over-sequences-attributes)
+* [Todo-list](#todo)
+
+
+## Motivation
 You can find several databases on the web that aim at storing shortcuts
-for a big variety of applications. **So why store them again as YAML
-in a git repository?**  
-Well, **first**, because it is simple to manipulate and simple to maintain.  
+for a big variety of applications.
+
+**So why store them again as YAML in a git repository?**
+
+Well, **first**, because it is simple to manipulate and simple to maintain.
+
 **Second**, because each of these databases lacks this or that application,
 because the way they provide shortcuts is not standardize, and because they
 do not have APIs to let us build tools on it (or do they? If you do know
-such a website or database, please let me know, post an issue on this repo!).  
+such a website or database, please let me know, post an issue on this repo!).
+
 And **third**, for me. As a user of many command-line utils, graphical
 interfaces and websites (like most of you), I want a way to easily search
-through all the available shortcuts to improve my use of these apps.  
+through all the available shortcuts to improve my use of these apps.
+
 I often have been scared about starting to use such or such app because
 I didn't want to spend time reading and writing and learning (and binding?)
 AND FAILING TO REMEMBER and going back in the man page or on a web cheat-sheet
@@ -57,11 +75,11 @@ of them (or none).
 
 ### File names
 `<APP>[<VERSION>].yml` where `<APP>` and `<VERSION>` can contain any character.
-Avoid spaces and other annoying characters though.
+Avoid spaces and other annoying characters.
 
 ### File contents
-First of all, you should know that mapping keys order is not preserved
-when loading a YAML file. Sequences keep order.
+First of all, you should know that *mapping keys* order is not preserved
+when loading a YAML file. *Sequences* keep order.
 
 To improve readability, put your inheritance instructions on top of the file,
 if any.
