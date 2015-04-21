@@ -51,20 +51,12 @@ A shortcut has three attributes:
 
 #### Deprecated attributes
 - [hotkey](https://en.wikipedia.org/wiki/Keyboard_shortcut):
-  deprecated since it is related to ONE sequence in the list
-  of sequences: how to tell which one is the hotkey? Plus no real interest.
+  no real interest.
 
 - [sacred](https://en.wikipedia.org/wiki/Keyboard_shortcut#.22Sacred.22_keybindings):
-  deprecated for the same reason hotkey is, plus sacred is an
-  opinionated value.
-
-- default: deprecated since it will be implicit in a keycut tool if we use
-  a directory structure like this: default dir for defaults (keycut-data),
-  CUSTOM dir for customs.  
-  The dir (profile) name can be displayed next to the shortcut.
+  no real interest, opinionated value, never 100% sacred.
 
 ### Directory structure for keycut tools
-
 The following is just a proposition.
 You can of course organize directories as you want.
 
@@ -192,14 +184,14 @@ shortcuts:
 - [ ] Find a standard to notate CTRL, ALT, SHIFT, DEL, ESC, ... keys
 - [ ] Find a standard for sequences that take parameters
 - [ ] Use Unicode arrows and others characters ('apple' key), or literals?
-- [ ] Case-sensitive attribute?
+- [x] Case-sensitive attribute
 - [ ] Note attribute for details about shortcut use?
-- [ ] Overwrite attribute for custom profiles? default to true?
-    In case of false: concatenation?
+- [x] Overwrite attribute for inheritant files.
+      False = concatenation of sequences.
 - [ ] System for i18n and l10n: copy all strings (actions)
-    into translation files?
+      into translation files?
 - [ ] Expand the concept of inheritance to profiles, with
-    this configuration written in a .keycutrc file?
+      this configuration written in a .keycutrc file?
 - [ ] Do shortcuts requiring for several non-control keys to be entered
-    together exist? Something like `k+e`? Never saw one like that.
+      together exist? Something like `k+e`? Never saw one like that.
 
