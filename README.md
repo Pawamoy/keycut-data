@@ -10,6 +10,7 @@ Keyboard shortcuts data stored in YAML files.
   * [Syntax of sequences](#syntax-of-sequences)
   * [Case sensitivity](#case-sensitivity)
   * [Finer control](#finer-control-over-sequences-attributes)
+  * [Control keys](#control-keys)
 * [Todo-list](#todo)
 * [License](#license)
 
@@ -185,8 +186,37 @@ shortcuts:
       
 ```
 
+### Control keys
+Literal   | How you should write it
+--------- | -----------------------
+Escape    | Esc
+F1..12    | F1..12
+Pause     | Pause
+Insert    | Ins
+Delete    | Del
+Home      | Home
+End       | End
+Page Up   | PageUp
+Page Down | PageDown
+Space     | Space
+Backspace | Backspace
+Enter     | Enter
+Arrows    | Up, Down, Left, Right or unicode arrows
+Shift     | Shift
+Caps Lock | CapsLock
+Num Lock  | NumLock
+Alt       | Alt (LeftAlt, RightAlt)
+Alt Gr    | AltGr
+Control   | Ctrl
+Function  | Fn
+Tabulate  | Tab
+Windows   | Windows only if windows program, else Super, or unicode
+Apple     | Apple, or unicode
+
+
+
 ## Todo
-- [ ] Find a standard to notate CTRL, ALT, SHIFT, DEL, ESC, ... keys
+- [x] Find a standard to notate all control keys
 - [ ] Find a standard for sequences that take parameters
 - [ ] Use Unicode arrows and others characters ('apple' key), or literals?
 - [x] Case-sensitive attribute
