@@ -24,12 +24,12 @@ A shortcut is described by an action. This action is a string without newlines.
 A shortcut is obviously composed of sequences of keys, written as an array
 (or list). Each sequence is equivalent to an other in terms of behavior.  
 A shortcut has three attributes:
-* `binding`, which tells if its related action is
-  "bindable" (i.e configurable to work with another sequence of keys).
+* `binding`, which tells if its related action is "bindable"
+  (i.e configurable to work with another sequence of keys).
+* `case_sensitive`, which tells if keys sequences are case sensitive or not.
 * `overwrite`, which, in case of inheritance, overwrites the inherited
   shortcut sequences and attributes if set to true, and concatenates new
   sequences to previous ones if false.
-* `case_sensitive`, which tells 
 
 #### Deprecated attributes
 - [hotkey](https://en.wikipedia.org/wiki/Keyboard_shortcut):
@@ -56,12 +56,12 @@ shortcuts that inherit (or not) from the default shortcuts, overwriting some
 of them (or none).
 
 ### File names
-`<APP>[<VERSION>].yml` where <APP> and <VERSION> can contain any character.
+`<APP>[<VERSION>].yml` where `<APP>` and `<VERSION>` can contain any character.
 Avoid spaces and other annoying characters though.
 
 ### File contents
 First of all, you should know that mapping keys order is not preserved
-when loading a YAML file. Sequences keep order though.
+when loading a YAML file. Sequences keep order.
 
 To improve readability, put your inheritance instructions on top of the file,
 if any.
@@ -78,17 +78,20 @@ inherits: false
 Then, add your global variables, if any.
 
 ```yaml
-# Set 'binding: true' by default (default's default: false)
+# Set 'binding: true' by default (global's default: false)
 binding: true
-# Set 'overwrite: true` by default (default's default: false too)
+# Set 'overwrite: true` by default (global's default: false too)
+overwrite: true
+# And the same goes for 'case_sensitive' (global's default: false again)
+case_sensitive: true
 # These global variables are handy if you don't want to add
-# overwrite or binding attributes in all your shortcuts
+# these attributes in each of the following shortcuts
 ```
 
-Then, add your contents.
+Then, add your shortcuts.
 
 ```yaml
-# Using categories
+# If you don't need categories, just use ONE category named 'shortcuts:'
 Some category:
 - action: some action related to this category
   keys: [<SEQUENCE_1>, ..., <SEQUENCE_K>]
@@ -104,33 +107,81 @@ Some category:
 - {action: Go right, keys: [→]}
 - {action: Go up, keys: [↑]}
 - {action: Go down, keys: [↓]}
+
 Here is another category:
 - action: I am a binding, even if 'binding' is globally set to false :D
   keys: [C]
   binding: true
-- action: >
-    A space in a sequence means that you release all keys before continue,
-    just like when you type words: Ctrl+U then T.
-  keys: [Ctrl+U T]
-- action: >
-    But spaces are optional, even if more readable. In fact, we prefer saying
-    explicitly when keys have to be entered ALL TOGETHER, with the '+' symbol.
-    Remember though that control keys like Ctrl, Alt, Shift and others have to
+```
+
+### Syntax of sequences
+* A space in a sequence means that you release all keys before continue,
+  just like when you type words: Ctrl+u then t (`keys: [Ctrl-u t]`)
+
+* But spaces are optional, even if more readable. In fact, we prefer saying
+  explicitly when keys have to be entered ALL TOGETHER, with the '-' symbol.
+  Thus, `Shift-kct` means Shift+k then c then t. Of course, avoid writing
+  Ctrl+w then Ctrl+w like this: `Ctrl-wCtrl-w`. Use a space!
+  > Remember that control keys like Ctrl, Alt, Shift and others have to
     be pressed BEFORE any other key in order for the sequence to be recognized.
-  keys: [-da]
-- action: 
+  
+* For sequences using control keys and a hyphen `-`,
+  you might use the terms `Minus`, `Hyphen` or `Dash`, because `Ctrl--`
+  is not very easy to read, even if it is tolerated. If the sequence uses
+  a hyphen but no control keys, then just use `-`.
+
+### Case sensitivity
+Typically, if a sequence (an or just a part of it) requires usage of a control
+key (Ctrl, Alt, Shift, ...), then it is assumed to be case-insensitive.  
+To disambiguate, each control key should use CapFirst format, and each
+letter in a sequence part **with control keys** should be lower:  
+`Ctrl-a`, `Ctrl-Shift-b` or `Ctrl-Alt-Del`, but not
+`ctrl-a`, `ctrl-shift-B` or `CTRL-ALT-DEL`.  
+Then, each sequence part **without any control key** is assumed to be
+case-sensitive: `g` is not equal to `G`, which is equal to `Shift-g`.
+You can override this behavior using a finer control over sequences attributes,
+see the next section.
+
+### Finer control over sequences attributes
+Sometimes you can have a key sequence that does not make use of control keys
+and is case-insensitive. It is also possible than some of equivalent sequences
+of a shortcut are bindings whereas others are not (hardcoded default).  
+You can use a `binding` and `case_sensitive` attribute for each item in
+a list of sequences, like this:
+
+```yaml
+binding: false
+case_sensitive: true
+
+shortcuts:
+- action: finer control
+  keys:
+    - seq: a
+      binding: true
+      case_sensitive: false
+# or even like this
+- action: global < shortcut < sequence
+  case_sensitive: false
+  binding: true
+  keys:
+    - seq: t
+      case_sensitive: true
+    - seq: a
+      
 ```
 
 ## Todo
-[ ] Find a standard to notate CTRL, ALT, SHIFT, DEL, ESC, ... keys
-[ ] Find a standard for sequences that take parameters
-[ ] Use Unicode arrows and others characters ('apple' key), or literals?
-[ ] Case-sensitive attribute?
-[ ] Note attribute for details about shortcut use?
-[ ] Overwrite attribute for custom profiles? default to true?
+- [ ] Find a standard to notate CTRL, ALT, SHIFT, DEL, ESC, ... keys
+- [ ] Find a standard for sequences that take parameters
+- [ ] Use Unicode arrows and others characters ('apple' key), or literals?
+- [ ] Case-sensitive attribute?
+- [ ] Note attribute for details about shortcut use?
+- [ ] Overwrite attribute for custom profiles? default to true?
     In case of false: concatenation?
-[ ] System for i18n and l10n: copy all strings (actions)
+- [ ] System for i18n and l10n: copy all strings (actions)
     into translation files?
-[ ] Expand the concept of inheritance to profiles, with
+- [ ] Expand the concept of inheritance to profiles, with
     this configuration written in a .keycutrc file?
+- [ ] Do shortcuts requiring for several non-control keys to be entered
+    together exist? Something like `k+e`? Never saw one like that.
 
