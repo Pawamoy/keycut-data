@@ -11,6 +11,7 @@ Keyboard shortcuts data stored in YAML files.
   * [Case sensitivity](#case-sensitivity)
   * [Finer control](#finer-control-over-sequences-attributes)
 * [Todo-list](#todo)
+* [License](#license)
 
 
 ## Motivation
@@ -195,3 +196,7 @@ shortcuts:
 - [ ] Do shortcuts requiring for several non-control keys to be entered
       together exist? Something like `k+e`? Never saw one like that.
 
+## License
+Copyright (c) 2015 Timothée Mazzucotelli
+
+This Source Code is subject to the terms of the Mozilla Public License, v. 2.0. See the LICENSE file for more details.
