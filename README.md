@@ -222,6 +222,8 @@ Apple     | Apple, or unicode
 - [ ] Use Unicode arrows and others characters ('apple' key), or literals?
 - [x] Case-sensitive attribute
 - [ ] Note attribute for details about shortcut use?
+- [ ] Operating System attribute? Example: not the same shortcuts
+      for firefox on Windows and on Linux
 - [x] Overwrite attribute for inheritant files.
       False = concatenation of sequences.
 - [ ] System for i18n and l10n: copy all strings (actions)
