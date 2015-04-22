@@ -191,7 +191,7 @@ Literal   | How you should write it
 --------- | -----------------------
 Escape    | Esc
 F1..12    | F1..12
-0..9      | 0..9 or Numbers
+0..9      | 0..9 or Number(s)
 Pause     | Pause
 Insert    | Ins
 Delete    | Del
@@ -202,7 +202,7 @@ Page Down | PageDown
 Space     | Space
 Backspace | Backspace
 Enter     | Enter
-Arrows    | Up, Down, Left, Right, Arrows or unicode
+Arrows    | Up, Down, Left, Right, Arrow(s) or unicode
 Shift     | Shift
 Caps Lock | CapsLock
 Num Lock  | NumLock
