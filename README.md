@@ -191,6 +191,7 @@ Literal   | How you should write it
 --------- | -----------------------
 Escape    | Esc
 F1..12    | F1..12
+0..9      | 0..9 or Numbers
 Pause     | Pause
 Insert    | Ins
 Delete    | Del
@@ -201,7 +202,7 @@ Page Down | PageDown
 Space     | Space
 Backspace | Backspace
 Enter     | Enter
-Arrows    | Up, Down, Left, Right or unicode arrows
+Arrows    | Up, Down, Left, Right, Arrows or unicode
 Shift     | Shift
 Caps Lock | CapsLock
 Num Lock  | NumLock
@@ -210,7 +211,7 @@ Alt Gr    | AltGr
 Control   | Ctrl
 Function  | Fn
 Tabulate  | Tab
-Windows   | Windows only if windows program, else Super, or unicode
+Windows   | Windows only if Windows program, else Super, or unicode
 Apple     | Apple, or unicode
 
 
