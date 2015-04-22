@@ -14,5 +14,7 @@ inherits:
 - ctrlp
 
 General:
-- action: leader key
+- action: Leader key.
   keys: [',']
+  overwrite: true
+  binding: true

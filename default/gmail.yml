@@ -1,61 +1,61 @@
 Size:
-- action: Increase the font size of all or some text
+- action: Increase the font size of all or some text.
   keys: [Ctrl-Shift-+, ⌘-Shift-+]
-- action: Decrease the font size of all or some text
+- action: Decrease the font size of all or some text.
   keys: [Ctrl-Shift--, ⌘-Shift--]
 Font:
-- action: Change font to the previous font as listed in the menu
+- action: Change font to the previous font as listed in the menu.
   keys: [Ctrl-Shift-5, ⌘-Shift-5]
-- action: Change font to the next font as listed in the menu
+- action: Change font to the next font as listed in the menu.
   keys: [Ctrl-Shift-6, ⌘-Shift-6]
 Emphasize:
-- action: bold all or some of your message
+- action: Bold all or some of your message.
   keys: [Ctrl-b, ⌘-b]
-- action: italicize all or some of your message
+- action: Italicize all or some of your message.
   keys: [Ctrl-i, ⌘-i]
-- action: underline all or some of your message
+- action: Underline all or some of your message.
   keys: [Ctrl-u, ⌘-u]
 Lists:
-- action: create a numbered list in your message
+- action: Create a numbered list in your message.
   keys: [Ctrl-Shift-7, ⌘-Shift-7]
-- action: create a bulleted list in your message
+- action: Create a bulleted list in your message.
   keys: [Ctrl-Shift-8, ⌘-Shift-8]
 Alignment:
 - action: >
-    align text along the left side of the page.
+    Align text along the left side of the page.
     Click the Align icon to find this option.
   keys: [Ctrl-Shift-l, ⌘-Shift-l]
 - action: >
-    align text in the center of the page.
+    Align text in the center of the page.
     Click the Align icon to find this option.
   keys: [Ctrl-Shift-e, ⌘-Shift-e]
 - action: >
-    align text along the right side of the page.
+    Align text along the right side of the page.
     Click the Align icon to find this option.
   keys: [Ctrl-Shift-r, ⌘-Shift-r]
 Indentation:
 - action: >
-    move text closer to the left of the page.
+    Move text closer to the left of the page.
     Click the Align icon to find this option.
   keys: ['Ctrl-[', '⌘-[']
 - action: >
-    indent text further to the right of the page.
+    Indent text further to the right of the page.
     Click the Align icon to find this option.
   keys: ['Ctrl-]', '⌘-]']
 Quote:
 - action: >
-    format a block of text as a quote.
+    Format a block of text as a quote.
     Click the Align icon to find this option.
   keys: [Ctrl-Shift-9, ⌘-Shift-9]
 Direction:
-- action: changes the directionality of text composing
+- action: Changes the directionality of text composing.
   keys: [Ctrl-Shift-., ⌘-Shift-.]
-- action: changes the directionality of text composing
+- action: Changes the directionality of text composing.
   keys: ['Ctrl-Shift-,', '⌘-Shift-,']
 Formatting:
-- action: remove formatting from selected text
+- action: Remove formatting from selected text.
   keys: ['Ctrl-\', '⌘-\']
-- action: hyperlink the selected text
+- action: Hyperlink the selected text.
   keys: [Ctrl-k, ⌘-k]
 
 # Use arrow keys to view messages and start composing.
@@ -134,11 +134,11 @@ Conversations:
 - action: >
     Go to next inbox section. If you use an inbox style with tabs or sections,
     you can quickly navigate to the next section.
-  keys: [`]
+  keys: ['`']
 - action: >
     Go to previous inbox section. If you use an inbox style with tabs
     or sections, you can quickly navigate to the previous section.
-  keys: [~]
+  keys: ['~']
 - action: >
     Open. Opens your conversation. Also expands or collapses a message
     if you are in 'Conversation View.'
@@ -151,7 +151,7 @@ Conversations:
   keys: [e]
 - action: >
     Mute. Archives the conversation, and all future messages skip the Inbox
-    unless sent or cc'd directly to you. Learn more.
+    unless sent or cc'd directly to you.
   keys: [m]
 - action: >
     Select conversation. Automatically checks and selects a conversation
@@ -165,11 +165,11 @@ Conversations:
   keys: [s]
 - action: >
     Mark as important. Helps Gmail learn what's important to you
-    by marking misclassified messages. (Specific to Priority Inbox)
+    by marking misclassified messages (specific to Priority Inbox).
   keys: [+]
 - action: >
     Mark as unimportant. Helps Gmail learn what's not important to you
-    by marking misclassified messages. (Specific to Priority Inbox)
+    by marking misclassified messages (specific to Priority Inbox).
   keys: [-]
 - action: >
     Report spam. Marks a message as spam and removes it
@@ -177,16 +177,16 @@ Conversations:
   keys: ['!']
 - action: >
     Reply. Replies to the message sender. Shift-r allows you to reply to
-    a message in a new window. (Only applicable in 'Conversation View.')
+    a message in a new window (only applicable in 'Conversation View').
   keys: [r]
 - action: >
     Reply all. Replies to all message recipients. Shift-a allows you
-    to reply to all message recipients in a new window.
-    (Only applicable in 'Conversation View.')
+    to reply to all message recipients in a new window
+    (only applicable in 'Conversation View').
   keys: [a]
 - action: >
     Forward. Forwards a message. Shift-f allows you to forward a message
-    in a new window. (Only applicable in 'Conversation View.')
+    in a new window (only applicable in 'Conversation View').
   keys: [f]
 - action: >
     Escape from input field. Removes the cursor from your current input field.
@@ -254,11 +254,11 @@ Conversations:
 
 Options:
 - action: "Show more actions. Displays the 'More Actions' drop-down menu."
-  keys: [.]
+  keys: ['.']
 - action: >
     Moves cursor to the first button in your Gmail toolbar.
     Displays the 'More Actions' drop-down menu.
-  keys: [,]
+  keys: [',']
 - action: Opens options in Chat
   keys: [Ctrl-Down, ⌘-Down]
 
@@ -286,15 +286,15 @@ Contacts:
     group membership or choose an action from the drop-down menu
     to apply to the contact.
   keys: [x]
-- action: Escape from input field. Removes the cursor from the current input
+- action: Escape from input field. Removes the cursor from the current input.
   keys: [Esc]
-- action: Delete. Deletes a contact permanently
+- action: Delete. Deletes a contact permanently.
   keys: ['#']
-- action: Group membership. Opens the groups button to group contacts
+- action: Group membership. Opens the groups button to group contacts.
   keys: [l]
 - action: >
     Undo. Reverses your previous action, if possible
-    (works for actions with an 'undo' link)
+    (works for actions with an 'undo' link).
   keys: [z]
 
 # Use the following combinations of keys to navigate through Gmail.
@@ -326,14 +326,14 @@ Combo-keys:
 - action: "Go to 'Sent Mail'. Takes you to all mail you've sent."
   keys: [gt]
 - action: Select all. Selects all mail.
-  keys: [*a]
+  keys: ['*a']
 - action: Select none. Deselects all mail.
-  keys: [*n]
+  keys: ['*n']
 - action: Select read. Selects all mail you've read.
-  keys: [*r]
+  keys: ['*r']
 - action: Select unread. Selects all unread mail.
-  keys: [*u]
+  keys: ['*u']
 - action: Select starred. Selects all starred mail.
-  keys: [*s]
+  keys: ['*s']
 - action: Select unstarred. Selects all unstarred mail.
-  keys: [*t]
+  keys: ['*t']
