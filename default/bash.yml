@@ -35,13 +35,13 @@ Editing:
   keys: [Ctrl-k]
 - action: Cut/delete the line before the cursor to the clipboard.
   keys: [Ctrl-u]
-- action: Swap current word with previousW
+- action: Swap current word with previous.
   keys: [Alt-t]
 - action: Swap the last two characters before the cursor (typo).
   keys: [Ctrl-t]
 - action: Swap the last two words before the cursor.
   keys: [Esc-t]
-- action: Paste the last thing to be cut (yank)
+- action: Paste the last thing to be cut (yank).
   keys: [Ctrl-y]
 - action: >
     Upper the case of every character from the cursor
