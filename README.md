@@ -21,14 +21,14 @@ for a big variety of applications.
 
 **So why store them again as YAML in a git repository?**
 
-Well, **first**, because it is simple to manipulate and simple to maintain.
+Well, first, because it is simple to manipulate and simple to maintain.
 
-**Second**, because each of these databases lacks this or that application,
-because the way they provide shortcuts is not standardize, and because they
+Second, because each of these databases lacks this or that application,
+because the way they provide shortcuts is not standardized, and because they
 do not have APIs to let us build tools on it (or do they? If you do know
-such a website or database, please let me know, post an issue on this repo!).
+such a website or database, please let me know!).
 
-And **third**, for me. As a user of many command-line utils, graphical
+And third, for me. As a user of many command-line utils, graphical
 interfaces and websites (like most of you), I want a way to easily search
 through all the available shortcuts to improve my use of these apps.
 
@@ -110,7 +110,7 @@ Some category:
     This action is long enough to take several lines in the YAML file.
     I think we should have a line size limit of 79 characters, what do you 
     think ?
-  keys: [Ctrl+E]
+  keys: [Ctrl-e]
 - action: you may want to use the short syntax if you have many short actions
   keys: [y]
 - {action: Go left, keys: [←]}
@@ -137,7 +137,7 @@ Here is another category:
   If Shift should have been released before typing c then t, then you would
   have written `Shift-k ct` or `Shift-k c t` (only the first space is important).  
   Sometimes, sequences with or without release of the control key are equals,
-  like `Ctrl-w Ctrl-w` in vim. In the vim shortcut you should then write the two:
+  like `Ctrl-w Ctrl-w` in vim. For this shortcut you should then write the two:
   `keys: [Ctrl-ww, Ctrl-w w]`.
   > Remember that control keys like Ctrl, Alt, Shift and others have to
     be pressed BEFORE any other key in order for the sequence to be recognized.
@@ -148,10 +148,10 @@ Here is another category:
   a hyphen but no control keys, then just use `-`.
 
 ### Case sensitivity
-Typically, if a sequence (an or just a part of it) requires usage of a control
+Typically, if a sequence (or just a part of it) requires usage of a control
 key (Ctrl, Alt, Shift, ...), then it is assumed to be case-insensitive.  
 Thus, each sequence part **without any control key** is assumed to be
-case-sensitive: `g` is not equal to `G`, which is equal to `Shift-g`.
+case-sensitive: `g` is not equal to `G`, `G` is equal to `Shift-g`.
 You can override this behavior using the `case_sensitive` attribute:
 * `true`: case sensitive for all
 * `false`: case insensitive for all
