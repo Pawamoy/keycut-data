@@ -77,7 +77,7 @@ when loading a YAML file. *Sequences* keep order.
 
 To improve readability, put your inheritance instructions on top of the file,
 if any.
- 
+
 ```yaml
 # Explicit inheritance
 inherits: app.version
@@ -108,7 +108,7 @@ Some category:
 # The next section details syntax of SEQUENCES
 - action: >
     This action is long enough to take several lines in the YAML file.
-    I think we should have a line size limit of 79 characters, what do you 
+    I think we should have a line size limit of 79 characters, what do you
     think ?
   keys: [Ctrl-e]
 - action: you may want to use the short syntax if you have many short actions
@@ -141,7 +141,7 @@ Here is another category:
   `keys: [Ctrl-ww, Ctrl-w w]`.
   > Remember that control keys like Ctrl, Alt, Shift and others have to
     be pressed BEFORE any other key in order for the sequence to be recognized.
-  
+
 * For sequences using control keys and a hyphen `-`,
   you might use the terms `Minus`, `Hyphen` or `Dash`, because `Ctrl--`
   is not very easy to read, even if it is tolerated. If the sequence uses
@@ -183,7 +183,7 @@ shortcuts:
     - seq: t
       case_sensitive: true
     - seq: a
-      
+
 ```
 
 ### Control keys
@@ -201,6 +201,8 @@ Page Up   | PageUp
 Page Down | PageDown
 Space     | Space
 Backspace | Backspace
+Plus      | Plus or +
+Minus     | Minus or -
 Enter     | Enter
 Arrows    | Up, Down, Left, Right, Arrow(s) or unicode
 Shift     | Shift
