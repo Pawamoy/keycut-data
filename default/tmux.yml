@@ -1,0 +1,289 @@
+General:
+- keys: [Ctrl-b]
+  action: Send the prefix key (Ctrl-b) through to the application.
+- keys: [Ctrl-o]
+  action: Rotate the panes in the current window forwards.
+- keys: [Ctrl-z]
+  action: Suspend the tmux client.
+- keys: ["!"]
+  action: Break the current pane out of the window.
+- keys: ['"']
+  action: Split the current pane into two, top and bottom.
+- keys: ["#"]
+  action: List all paste buffers.
+- keys: ["$"]
+  action: Rename the current session.
+- keys: ["%"]
+  action: Split the current pane into two, left and right.
+- keys: ["&"]
+  action: Kill the current window.
+- keys: ["'"]
+  action: Prompt for a window index to select.
+- keys: ["("]
+  action: Switch the attached client to the previous session.
+- keys: [")"]
+  action: Switch the attached client to the next session.
+- keys: [","]
+  action: Rename the current window.
+- keys: ["-"]
+  action: Delete the most recently copied buffer of text.
+- keys: ["."]
+  action: Prompt for an index to move the current window.
+- keys: [0-9]
+  action: Select windows 0 to 9.
+- keys: [":"]
+  action: Enter the tmux command prompt.
+- keys: [";"]
+  action: Move to the previously active pane.
+- keys: ["="]
+  action: Choose which buffer to paste interactively from a list.
+- keys: ["?"]
+  action: List all key bindings.
+- keys: [Shift-d]
+  action: Choose a client to detach.
+- keys: [Shift-l]
+  action: Switch the attached client back to the last session.
+- keys: ["["]
+  action: Enter copy mode to copy text or view the history.
+- keys: ["]"]
+  action: Paste the most recently copied buffer of text.
+- keys: [c]
+  action: Create a new window.
+- keys: [d]
+  action: Detach the current client.
+- keys: [f]
+  action: Prompt to search for text in open windows.
+- keys: [i]
+  action: Display some information about the current window.
+- keys: [l]
+  action: Move to the previously selected window.
+- keys: [n]
+  action: Change to the next window.
+- keys: [o]
+  action: Select the next pane in the current window.
+- keys: [p]
+  action: Change to the previous window.
+- keys: [q]
+  action: Briefly display pane indexes.
+- keys: [r]
+  action: Force redraw of the attached client.
+- keys: [m]
+  action: Mark the current pane (see select-pane -m).
+- keys: [Shift-m]
+  action: Clear the marked pane.
+- keys: [s]
+  action: Select a new session for the attached client interactively.
+- keys: [t]
+  action: Show the time.
+- keys: [w]
+  action: Choose the current window interactively.
+- keys: [x]
+  action: Kill the current pane.
+- keys: [z]
+  action: Toggle zoom state of the current pane.
+- keys: ["{"]
+  action: Swap the current pane with the previous pane.
+- keys: ["}"]
+  action: Swap the current pane with the next pane.
+- keys: ["~"]
+  action: Show previous messages from tmux, if any.
+- keys: [PageUp]
+  action: Enter copy mode and scroll one page up.
+- keys: [Arrows]
+  action: Change to the pane above, below, to the left, or to the right of the current pane.
+- keys: [Alt-1, Alt-2, Alt-3, Alt-4, Alt-5]
+  action: "Arrange panes in one of the five preset layouts: even-horizontal, even-vertical, main-horizontal, main-vertical, or tiled."
+- keys: [Space]
+  action: Arrange the current window in the next preset layout.
+- keys: [Alt-n]
+  action: Move to the next window with a bell or activity marker.
+- keys: [Alt-o]
+  action: Rotate the panes in the current window backwards.
+- keys: [Alt-p]
+  action: Move to the previous window with a bell or activity marker.
+- keys: [Ctrl-Arrows]
+  action: Resize the current pane in steps of one cell.
+- keys: [Alt-Arrows]
+  action: Resize the current pane in steps of five cells.
+
+Copy mode VI:
+- action: Append selection
+  keys: [Shift-a]
+- action: Back to indentation
+  keys: [^]
+- action: Bottom of history
+  keys: [Shift-g]
+- action: Clear selection
+  keys: [Escape]
+- action: Copy selection
+  keys: [Enter]
+- action: Copy to named buffer
+  keys: ['"']
+- action: Cursor down
+  keys: [j]
+- action: Cursor left
+  keys: [h]
+- action: Cursor right
+  keys: [l]
+- action: Cursor to bottom line
+  keys: [Shift-l]
+- action: Cursor to middle line
+  keys: [Shift-m]
+- action: Cursor to top line
+  keys: [Shift-H]
+- action: Cursor up
+  keys: [k]
+- action: Delete entire line
+  keys: [d]
+- action: Delete/Copy to end of line
+  keys: [Shift-d]
+- action: End of line
+  keys: [$]
+- action: Go to line
+  keys: [":"]
+- action: Half page down
+  keys: [Ctrl-d]
+- action: Half page up
+  keys: [Ctrl-u]
+- action: Jump again
+  keys: [";"]
+- action: Jump again in reverse
+  keys: [","]
+- action: Jump backward
+  keys: [Shift-f]
+- action: Jump forward
+  keys: [f]
+- action: Jump to backward
+  keys: [Shift-t]
+- action: Jump to forward
+  keys: [t]
+- action: Next page
+  keys: [Ctrl-f]
+- action: Next paragraph
+  keys: ["}"]
+- action: Next space
+  keys: [Shift-w]
+- action: Next space, end of word
+  keys: [Shift-e]
+- action: Next word
+  keys: [w]
+- action: Next word end
+  keys: [e]
+- action: Other end of selection
+  keys: [o]
+- action: Paste buffer
+  keys: [p]
+- action: Previous page
+  keys: [Ctrl-b]
+- action: Previous paragraph
+  keys: ["{"]
+- action: Previous space
+  keys: [Shift-b]
+- action: Previous word
+  keys: [b]
+- action: Quit mode
+  keys: [q]
+- action: Rectangle toggle
+  keys: [v]
+- action: Scroll down
+  keys: [Ctrl-Down, Ctrl-e]
+- action: Scroll up
+  keys: [Ctrl-Up, Ctrl-y]
+- action: Search again
+  keys: [n]
+- action: Search again in reverse
+  keys: [Shift-n]
+- action: Search backward
+  keys: ["?"]
+- action: Search forward
+  keys: ["/"]
+- action: Select line
+  keys: [Shift-v]
+- action: Start of line
+  keys: [0]
+- action: Start selection
+  keys: [Space]
+- action: Top of history
+  keys: [g]
+- action: Transpose characters
+
+
+Copy mode EMACS:
+- action: Back to indentation
+  keys: [Alt-m]
+- action: Bottom of history
+  keys: [Alt-<]
+- action: Clear selection
+  keys: [Ctrl-g]
+- action: Copy selection
+  keys: [Alt-w]
+- action: Cursor down
+  keys: [Down]
+- action: Cursor left
+  keys: [Left]
+- action: Cursor right
+  keys: [Right]
+- action: Cursor to middle line
+  keys: [Alt-r]
+- action: Cursor to top line
+  keys: [Alt-Shift-r]
+- action: Cursor up
+  keys: [Up]
+- action: Delete entire line
+  keys: [Ctrl-u]
+- action: Delete/Copy to end of line
+  keys: [Ctrl-k]
+- action: End of line
+  keys: [Ctrl-e]
+- action: Go to line
+  keys: [g]
+- action: Half page down
+  keys: [Alt-Down]
+- action: Half page up
+  keys: [Alt-Up]
+- action: Jump again
+  keys: [";"]
+- action: Jump again in reverse
+  keys: [","]
+- action: Jump backward
+  keys: [Shift-f]
+- action: Jump forward
+  keys: [f]
+- action: Next page
+  keys: [PageDown]
+- action: Next paragraph
+  keys: ["Alt-}"]
+- action: Next word end
+  keys: [Alt-f]
+- action: Paste buffer
+  keys: [Ctrl-y]
+- action: Previous page
+  keys: [PageUp]
+- action: Previous paragraph
+  keys: ["Alt-{"]
+- action: Previous word
+  keys: [Alt-b]
+- action: Quit mode
+  keys: [Escape]
+- action: Rectangle toggle
+  keys: [Shift-r]
+- action: Scroll down
+  keys: [Ctrl-Down]
+- action: Scroll up
+  keys: [Ctrl-Up]
+- action: Search again
+  keys: [n]
+- action: Search again in reverse
+  keys: [Shift-n]
+- action: Search backward
+  keys: [Ctrl-r]
+- action: Search forward
+  keys: [Ctrl-s]
+- action: Start of line
+  keys: [Ctrl-a]
+- action: Start selection
+  keys: [Ctrl-Space]
+- action: Top of history
+  keys: ["Alt->"]
+- action: Transpose characters
+  keys: [Ctrl-t]
