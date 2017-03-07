@@ -205,8 +205,6 @@ Copy mode VI:
   keys: [Space]
 - action: Top of history
   keys: [g]
-- action: Transpose characters
-
 
 Copy mode EMACS:
 - action: Back to indentation
