@@ -98,7 +98,7 @@ History:
 - action: All arguments of previous command.
   keys: ['!*']
 - action: Run previous command, replacing abc with def.
-  keys: [^abc­^­def]
+  keys: [^abc^def^]
 
 Process control:
 - action: Interrupt/Kill whatever you are running (SIGINT).
